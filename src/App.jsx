@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MyNavbar from './components/MyNavBar';
 import GenersSection from "./components/GenersSection";
 import MyGallery from "./components/gallery/MyGallery";
@@ -10,7 +10,7 @@ import MovieDetails from './components/MovieDetails';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <MyNavbar />
       <Routes>
         <Route path="/" element={
@@ -25,7 +25,7 @@ function App() {
         <Route path="/movie-details/:movieId" element={<MovieDetails />} />
       </Routes>
       <MyFooter className='bottom-0' />
-    </Router>
+    </BrowserRouter>
   )
 }
 
